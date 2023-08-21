@@ -1,0 +1,25 @@
+sudo
+8  apt install mariadb-server
+    9  mysql_secure_installation
+####it will ask for password just press enter
+###then login to the database using 
+mysql -u root -p
+####create a database and insert some data
+create database thegeekstuff;
+
+###create the table
+create table employee (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name varchar(20),
+dept varchar(10),
+salary int(10)
+);
+####inser data
+insert into employee values(100,'Thomas','Sales',5000);
+insert into employee values(200,'Jason','Technology',5500);
+insert into employee values(300,'Mayla','Technology',7000);
+insert into employee values(400,'Nisha','Marketing',9500);
+insert into employee values(500,'Randy','Technology',6000);
+####show the table
+ select * from employee;
+ select name, dept from employee;

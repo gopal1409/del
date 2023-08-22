@@ -5,3 +5,5 @@
     7  docker ps
     8  curl localhost
     9  docker images
+###if you are using normal user
+usermod -aG docker username

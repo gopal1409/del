@@ -40,3 +40,6 @@ ctrl c
    49  docker run --publish 81:80 --detach nginx
    50  docker images
    51  docker info
+###3docker network
+docker network ls
+docker network inspect bridge

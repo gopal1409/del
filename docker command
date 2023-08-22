@@ -25,3 +25,7 @@ docker ps
    28  docker start c93
    29  docker ps
    30  clear
+###to check container are running as cggroup
+docker container stats
+###to come out
+ctrl c

@@ -7,3 +7,11 @@
     9  docker images
 ###if you are using normal user
 usermod -aG docker username
+
+ 12  docker container run --publish 81:80 -d httpd
+   13  docker ps
+   14  curl localhost:81
+   15  docker container run --publish 82:80 -d httpd
+   16  docker ps
+   17  curl localhost:82
+   18  docker images

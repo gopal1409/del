@@ -15,3 +15,13 @@ usermod -aG docker username
    16  docker ps
    17  curl localhost:82
    18  docker images
+###container are running as process
+docker ps
+23  docker top c9391
+   24  ps aux
+   25  kill -9 16795
+   26  docker ps
+   27  docker ps -a
+   28  docker start c93
+   29  docker ps
+   30  clear

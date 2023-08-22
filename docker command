@@ -1,0 +1,7 @@
+#how to verify docker installation
+  sudo -i
+  docker --version
+   6  docker container run --publish 80:80 -d nginx
+    7  docker ps
+    8  curl localhost
+    9  docker images

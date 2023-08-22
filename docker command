@@ -43,3 +43,14 @@ ctrl c
 ###3docker network
 docker network ls
 docker network inspect bridge
+
+###how to convert an existing application into an container based image
+ 6 docker exec -it d5a bash
+   7 docker ps
+   8 docker commit -p d5a3fefdf my-backup
+   9 docker image
+  10 docker images
+  11 docker login
+  12 docker tag bd7e97294665 gopal1409/nginx
+  13 docker push gopal1409/nginx
+

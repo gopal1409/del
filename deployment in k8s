@@ -1,1 +1,16 @@
 
+39  kubectl create deploy nginx-deployment --image=nginx --port=80 --dry-run=client -o yaml > dep.yml
+   40  cat dep.yml 
+   41  kubectl apply -f dep.yml 
+   42  kubectl get deploy
+   43  kubectl describe deploy nginx-deploy
+   44  nano dep.yml 
+###change the replica count to 3
+####save the file using ctrl x and press y and enter
+   45  kubectl apply -f dep.yml 
+   46  kubectl get pod
+   47  kubectl get deploy
+   48  kubectl get rs
+   49  kubectl get pod
+   50  kubectl delete pod nginx-deployment-588694f49b-7djbh
+   51  kubectl get pod

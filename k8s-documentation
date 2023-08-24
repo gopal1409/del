@@ -18,3 +18,6 @@ kubectl edit pod myfirstpod
    51  kubectl apply -f chatapp.yml 
    52  kubectl get pod
    53  kubectl describe pod chatapp
+####lets expose an pod
+kubectl run myfirstpod --image=nginx --port=80
+kubectl expose pod myfirstpod --type=NodePort --port=80

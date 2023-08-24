@@ -14,3 +14,12 @@
    49  kubectl get pod
    50  kubectl delete pod nginx-deployment-588694f49b-7djbh
    51  kubectl get pod
+####expose the service
+ 55  kubectl get deploy
+   56  kubectl expose deploy nginx-deployment --type=NodePort 
+   57  kubectl get svc
+   58  curl localhost:32010
+   59  clear
+   60  kubectl get pod -o wide
+   61  kubectl get svc
+   62  kubectl describe svc nginx-deployment

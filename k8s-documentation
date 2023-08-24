@@ -1,4 +1,11 @@
 ###how to validate k8s cluster
 sudo -i
 kubectl get nodes
-kubectl get pod --all-namespaces
+kubectl get pod --all-namespaces'
+
+###3lewts deploy our first workload
+40  kubectl run myfirstpod --image=nginx --port=80 --dry-run=client -o yaml > pod.yml
+   41  cat pod.yml 
+   42  kubectl apply -f pod.yml 
+   43  kubectl get pod
+   44  kubectl describe pod myfirstpod

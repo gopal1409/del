@@ -1,7 +1,7 @@
 sudo -i
 35  mkdir /mnt/data
    
-   37  apt install git
+   37 yum install git
    39  git clone https://github.com/gopal1409/del-manifest.git
    40  cd del-manifest/
    41  ls

@@ -9,3 +9,6 @@ kubectl get pod --all-namespaces'
    42  kubectl apply -f pod.yml 
    43  kubectl get pod
    44  kubectl describe pod myfirstpod
+####how to check the running configuration in k8s
+kubectl edit pod myfirstpod
+####save the file using Press Esc :q

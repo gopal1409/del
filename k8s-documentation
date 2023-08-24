@@ -1,0 +1,4 @@
+###how to validate k8s cluster
+sudo -i
+kubectl get nodes
+kubectl get pod --all-namespaces

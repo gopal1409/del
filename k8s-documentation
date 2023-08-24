@@ -21,3 +21,7 @@ kubectl edit pod myfirstpod
 ####lets expose an pod
 kubectl run myfirstpod --image=nginx --port=80
 kubectl expose pod myfirstpod --type=NodePort --port=80
+###l;ets delete the pod
+47  kubectl get pod
+   48  kubectl delete pod myfirstpod
+   49  kubectl get pod

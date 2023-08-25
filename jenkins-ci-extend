@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+  
+
+    stages {
+        stage('git scm') {
+            steps {
+                // Get some code from a GitHub repository
+                git credentialsId: 'gopal-ssh-key', url: 'git@github.com:gopal1409/del-jenkins.git'
+
+
+                // Run Maven on a Unix agent.
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            
+        }
+        stage('mvn compile') {
+            steps {
+                
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            
+        }
+        stage('mvn test') {
+            steps {
+                
+                sh "mvn test"
+                junit '**/target/surefire-reports/TEST-*.xml'
+            } 
+        }
+        stage('mvn checkstyle') {
+            steps {
+                
+                sh "mvn checkstyle:checkstyle"
+                junit '**/target/surefire-reports/TEST-*.xml'
+            } 
+        }
+        stage('archival') {
+            steps {
+                
+                archiveArtifacts 'target/*.jar'
+            } 
+        }
+        
+    }
+}

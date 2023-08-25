@@ -11,3 +11,7 @@ yum install git
    41  kubectl logs node-app-job
    42  kubectl get pod
    43  kubectl logs node-app-job-pwtdc
+####
+git pull
+ 38  kubectl apply -f job.yml 
+kubectl get pod

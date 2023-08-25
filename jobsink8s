@@ -1,0 +1,13 @@
+###
+sudo -i
+yum install git
+
+35  kubectl get nodes
+   36  git clone https://github.com/gopal1409/del-manifest.git
+   37  cd del-manifest/
+   38  kubectl apply -f job.yml 
+   39  kubectl get jobs
+   40  kubectl logs node-app-jobs
+   41  kubectl logs node-app-job
+   42  kubectl get pod
+   43  kubectl logs node-app-job-pwtdc

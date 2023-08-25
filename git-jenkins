@@ -1,2 +1,20 @@
 sudo -i
 yum  install git
+34  yum install git
+   35  git clone https://github.com/gopal1409/springchat.git
+   36  cd springchat/
+   37  rm -rf .git
+   38  git config --global user.name "gopal"
+   39  git config --global user.email "gopal1409@gmail.com"
+   40  git init
+   41  git add .
+   42  git commit -m "my spring project"
+   43  git log
+   44  ssh-keygen -t rsa
+   45  cat /root/.ssh/id_rsa.pub
+##once you add the key in github
+###create a new repo in github. also select ssh so that you will have remote origin as ssh based connectioon 
+48  git remote add origin git@github.com:gopal1409/del-jenkins.git
+   49  git push origin master
+##dont forget to copy the private key and store it in a notepad
+   50  cat /root/.ssh/id_rsa
